@@ -54,7 +54,6 @@ sign up → risk profiled → weekly premium set → coverage active
 
 <div align="center">
 <img src="./chart_pricing.svg" width="680" alt="Weekly Premium vs Coverage by Risk Tier"/>
-<br/>
 <img src="./chart_funnel.svg" width="680" alt="Loyalty Trust Tier Payout Speed Funnel"/>
 <br/>
 <img src="./chart_signals.svg" width="680" alt="6-Signal Anti-Spoofing Detection Weights"/>
