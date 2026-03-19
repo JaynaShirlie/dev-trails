@@ -66,7 +66,7 @@ sign up → risk profiled → weekly premium set → coverage active
 
 **fig 1 — weekly premium vs max coverage by risk tier**
 <div align="center">
-<img src="./assets/chart_pricing.svg" width="680" alt="Fig 1: Weekly Premium vs Coverage by Risk Tier"/>
+<img src="./chart_pricing.svg" width="680" alt="Fig 1: Weekly Premium vs Coverage by Risk Tier"/>
 </div>
 
 > solid bars = weekly premium paid. faded bars = maximum coverage unlocked. low-risk workers pay ₹20 for ₹500 cover; high-risk pay ₹70 for ₹1,500.
@@ -75,7 +75,7 @@ sign up → risk profiled → weekly premium set → coverage active
 
 **fig 2 — loyalty tier → payout speed funnel**
 <div align="center">
-<img src="./assets/chart_funnel.svg" width="680" alt="Fig 2: Loyalty Trust Tier Payout Speed Funnel"/>
+<img src="./chart_funnel.svg" width="680" alt="Fig 2: Loyalty Trust Tier Payout Speed Funnel"/>
 </div>
 
 > workers climb tiers through consistent payments and clean claim history. champion tier = instant payout + 20% premium discount.
@@ -84,7 +84,7 @@ sign up → risk profiled → weekly premium set → coverage active
 
 **fig 3 — 6-signal anti-spoofing detection weights**
 <div align="center">
-<img src="./assets/chart_signals.svg" width="680" alt="Fig 3: Anti-Spoofing Signal Detection Weights"/>
+<img src="./chart_signals.svg" width="680" alt="Fig 3: Anti-Spoofing Signal Detection Weights"/>
 </div>
 
 > income fingerprint carries the highest weight (28%) because it's the hardest signal to fake. GPS alone is the easiest — so we weight it last.
