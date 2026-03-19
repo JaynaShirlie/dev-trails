@@ -1,230 +1,148 @@
 <div align="center">
 
-<img src="https://img.shields.io/badge/Phase-1%20%E2%80%94%20Seed-FFD700?style=for-the-badge&logoColor=black" />
+<img src="https://img.shields.io/badge/Phase-1%20Seed-FFD700?style=for-the-badge&logoColor=black" />
 <img src="https://img.shields.io/badge/DEVTrails-2026-0066CC?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Status-Submitted-22C55E?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Status-Active-22C55E?style=for-the-badge" />
 
-<br/><br/>
-
-```
-   ██████╗ ██╗ ██████╗ ███████╗██╗  ██╗██╗███████╗██╗     ██████╗ 
-  ██╔════╝ ██║██╔════╝ ██╔════╝██║  ██║██║██╔════╝██║     ██╔══██╗
-  ██║  ███╗██║██║  ███╗███████╗███████║██║█████╗  ██║     ██║  ██║
-  ██║   ██║██║██║   ██║╚════██║██╔══██║██║██╔══╝  ██║     ██║  ██║
-  ╚██████╔╝██║╚██████╔╝███████║██║  ██║██║███████╗███████╗██████╔╝
-   ╚═════╝ ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚═════╝ 
-```
-
-### *your safety net. zero drama. automatic payout. no cap.*
-
-<br/>
-
-**AI-Powered Parametric Income Insurance for India's Gig Workers**
-
-`Python` `FastAPI` `Scikit-learn` `MongoDB` `OpenWeatherMap` `Razorpay`
-
-<br/>
-
-</div>
-
----
-
-## the vibe check 🌧️
-
-> a zomato partner leaves home at 7am. by 9am the city is underwater. no deliveries = no money. no money = no rent.  
-> **gigshield detects the rain. gigshield pays them. they didn't even have to ask.**
-
-that's it. that's the whole thing.
-
----
-
-## what's actually broken rn
-
-india has **11M+ gig delivery workers**. rain hits → they lose ₹300-500/day. no one covers that. traditional insurance? weeks of paperwork for ₹500. hard pass.
-
-```
-gig worker income loss from weather disruptions → 20-30% of monthly earnings
-existing safety net → absolutely nothing
-gigshield's job → fix that
-```
-
----
-
-## how gigshield works (the full flow)
 
 <div align="center">
+<pre>
+ ██████╗ ██╗ ██████╗ ███████╗██╗  ██╗██╗███████╗██╗     ██████╗ 
+██╔════╝ ██║██╔════╝ ██╔════╝██║  ██║██║██╔════╝██║     ██╔══██╗
+██║  ███╗██║██║  ███╗███████╗███████║██║█████╗  ██║     ██║  ██║
+██║   ██║██║██║   ██║╚════██║██╔══██║██║██╔══╝  ██║     ██║  ██║
+╚██████╔╝██║╚██████╔╝███████║██║  ██║██║███████╗███████╗██████╔╝
+ ╚═════╝ ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚═════╝
+</pre>
+</div>
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     GIGSHIELD FLOW                          │
-└─────────────────────────────────────────────────────────────┘
+### *parametric income insurance. zero claims. automatic payouts. built for the rain.*
 
-  [ sign up ] 
-      ↓
-  [ enter location + platform + avg weekly income ]
-      ↓
-  [ AI risk profiling ] ← weather history + zone data + past disruptions
-      ↓
-  [ dynamic weekly premium generated ] ← ₹20 / ₹40 / ₹70 based on risk
-      ↓
-  [ pay weekly. coverage activated. ]
-      ↓
-  [ system watches weather APIs 24/7 ]
-      ↓
-  [ threshold crossed? (rain > 50mm, temp > 42°C, AQI > 300) ]
-      ↓
-  ┌───────────────────────────────────────┐
-  │     FRAUD CHECK (anti-spoofing)       │  ← NEW. mandatory. explained below.
-  └───────────────────────────────────────┘
-      ↓ (legit claim)
-  [ workability score drops below threshold ]
-      ↓
-  [ claim auto-triggered. user notified. ]
-      ↓
-  [ payout calculated based on predicted daily loss ]
-      ↓
-  [ money hits UPI / Razorpay. done. zero touch. ]
-```
+**`Python`** **`FastAPI`** **`Scikit-learn`** **`MongoDB`** **`OpenWeatherMap`** **`Razorpay`**
 
 </div>
 
 ---
 
-## the brain — AI/ML stack 🧠
+## the problem, one sentence
 
-| Module | What it does | Model |
-|--------|-------------|-------|
-| **Risk Profiler** | scores each worker's location risk weekly | Random Forest |
-| **Dynamic Pricer** | converts risk score → weekly premium | Rule-based + regression |
-| **Earnings Estimator** | predicts what the worker *would* have earned | Linear Regression |
-| **Fraud Detector** | catches bad actors before payout | Isolation Forest |
-| **Workability Score** | 0-100 score of "can this person work right now?" | Weighted env. index |
-
-### the workability score formula
-
-$$W = 100 - \left(w_r \cdot R + w_t \cdot T + w_a \cdot A\right)$$
-
-where $R$ = rainfall index, $T$ = temperature index, $A$ = AQI index, and $w_r, w_t, w_a$ are learned weights.  
-**payout triggers when W < 40.**
+a zomato partner loses ₹400 when it rains. no one pays them back. **gigshield does — automatically, before they even notice.**
 
 ---
 
-## weekly pricing model 💸
+## how it works
 
-> gig workers get paid weekly. so we charge weekly. simple math.
-
-| Risk Level | Weekly Premium | Max Coverage |
-|------------|---------------|--------------|
-| 🟢 Low     | ₹20           | ₹500/week    |
-| 🟡 Medium  | ₹40           | ₹1,000/week  |
-| 🔴 High    | ₹70           | ₹1,500/week  |
-
-premiums adjust dynamically every week based on forecasted weather risk for that worker's zone.
+```
+sign up → risk profiled → weekly premium set → coverage active
+           ↓
+        weather API triggers (rain > 50mm / temp > 42°C / AQI > 300)
+           ↓
+        income fingerprint + trust score computed  ← fraud layer
+           ↓
+        workability score drops below 40 → claim auto-fired
+           ↓
+        payout hits UPI. worker gets notified. done.
+```
 
 ---
 
-## parametric triggers ⚡
+## what makes gigshield different
 
-no paperwork. no adjuster. just data.
+### 🧬 income fingerprinting
+every worker has a unique earnings curve — peak hours, active zones, weekly rhythm. gigshield builds an **individual behavioral baseline** at onboarding. when a claim fires, it cross-checks: *does this person's activity pattern actually look disrupted?* a spoofer's baseline never breaks. a real worker's does.
 
 ```python
-TRIGGERS = {
-    "heavy_rain":    {"threshold": 50,  "unit": "mm",  "coverage_hours": 6},
-    "extreme_heat":  {"threshold": 42,  "unit": "°C",  "coverage_hours": 4},
-    "severe_aqi":    {"threshold": 300, "unit": "AQI", "coverage_hours": 8},
-}
-# when threshold crossed → workability score computed → payout auto-initiated
+# simplified income fingerprint check
+baseline_activity = worker.avg_orders_per_hour[current_hour]
+actual_activity   = platform_api.get_recent_orders(worker.id, window=2h)
+disruption_delta  = baseline_activity - actual_activity
+# genuine disruption → delta is large. spoofer → delta ≈ 0.
 ```
+
+### 🌊 zone liquidity guard
+traditional insurance doesn't know it's about to go broke until it already has. gigshield runs a **real-time pool health monitor**. if one zone has 200 active policies and a red-alert storm hits, the system pre-flags concentration risk before payouts fire — and can soft-cap new policy activations in high-risk zones during an active event.
+
+```
+pool health = (total_reserves) / (projected_max_payout_this_event)
+if pool_health < 1.3 → trigger soft-cap + reinsurance flag
+```
+
+### 🏆 loyalty trust score
+most fraud systems are purely punitive. gigshield flips it — workers **earn trust over time**. consistent premium payments, no anomalies, verified work history = higher trust tier = faster payouts and lower premiums.
+
+| Trust Tier | Payout Speed | Premium Discount | Unlock |
+|------------|-------------|-----------------|--------|
+| New        | 6h soft-hold | 0%             | —      |
+| Verified   | 2h           | 5%             | 3 months |
+| Trusted    | 45 min       | 12%            | 6 months + 0 flags |
+| Champion   | instant      | 20%            | 1yr + perfect record |
+
+### ☁️ multi-source weather consensus
+gigshield requires **2-of-3 source agreement** before a trigger fires — OpenWeatherMap, IMD data, and satellite-based precipitation index. no single API failure can cause a false payout.
 
 ---
 
-## 🚨 adversarial defense & anti-spoofing strategy
+## AI/ML stack
 
-> *this section addresses the Phase 1 mandatory market crash update — GPS spoofing by coordinated fraud rings.*
+| Module | Model | Purpose |
+|--------|-------|---------|
+| Risk Profiler | Random Forest | weekly risk score per zone |
+| Dynamic Pricer | Regression | risk score → weekly premium |
+| Income Fingerprinter | LSTM / baseline deviation | behavioral disruption detection |
+| Fraud Detector | Isolation Forest | anomaly + peer cluster detection |
+| Workability Score | Weighted env. index | payout trigger (W < 40) |
+| Pool Health Monitor | Rule-based + projection | liquidity risk management |
 
-### the threat
-500 delivery workers. telegram group. GPS spoofer apps. fake their location into a rain alert zone. trigger mass payouts. drain the pool. **this is a real attack vector.**
+**workability score:** $W = 100 - (w_r \cdot R + w_t \cdot T + w_a \cdot A)$ — payout fires when $W < 40$
 
-### 1. the differentiation — how we tell real from fake
+---
 
-gigshield uses a **multi-signal trust score**, not just GPS:
+## 🚨 adversarial defense & anti-spoofing
 
-```
-TRUST SCORE = f(GPS, accelerometer, platform_activity, peer_density, network_cell, historical_pattern)
-```
+> *mandatory Phase 1 update — response to coordinated GPS spoofing attack vector*
 
-| Signal | Legit Worker in Rain | GPS Spoofer at Home |
-|--------|---------------------|---------------------|
+**the attack:** 500 workers. telegram group. GPS spoofer apps. fake location → storm zone → mass false payouts → pool drained.
+
+**gigshield's defense — 6-signal trust score:**
+
+| Signal | Real Worker | GPS Spoofer |
+|--------|------------|-------------|
 | GPS location | storm zone ✅ | storm zone (faked) ✅ |
-| Accelerometer | erratic / sheltering movement | stationary / home pattern ❌ |
-| Platform app activity | last order 45 min ago, then gone | orders still completing normally ❌ |
-| Cell tower triangulation | matches GPS zone ✅ | doesn't match home cell ❌ |
-| Peer density signal | 80% of nearby workers also stopped | only this cluster claiming ❌ |
-| Historical behavior | consistent zone pattern | sudden zone jump ❌ |
+| Income fingerprint delta | orders stopped ✅ | orders still running ❌ |
+| Accelerometer pattern | sheltering movement ✅ | stationary/home ❌ |
+| Cell tower vs GPS match | consistent ✅ | mismatch ❌ |
+| Peer cluster anomaly | organic spread ✅ | same-pincode spike ❌ |
+| Historical claim velocity | normal ✅ | sudden burst ❌ |
 
-**if trust score < threshold → claim flagged, not rejected.**
-
-### 2. the data — beyond GPS
-
-gigshield analyzes:
-
-- **Device motion sensors** — a person sheltering from rain moves differently than someone sitting at home
-- **Platform-side order flow** — if the delivery app still shows them completing orders during a "disruption", something's off
-- **Network cell ID** — cross-referenced against claimed GPS location
-- **Hyper-local peer clustering** — if 50 workers from the same telegram-like group all claim simultaneously from one pincode, anomaly score spikes
-- **Historical claim velocity** — first claim ever during a storm = normal. 4 claims in 3 weeks from a zone that had 1 alert = suspicious
-- **Weather source cross-validation** — OpenWeather + IMD + satellite imagery. if one source says red alert and two say clear, the trigger holds but fraud score increases
-
-### 3. the UX balance — flagged ≠ rejected
-
-this is the hard part. a worker with a bad network in a flood zone looks exactly like a spoofer. we don't punish them.
-
+**claim resolution flow:**
 ```
-CLAIM STATUS FLOW:
-
-AUTO-APPROVED  → trust score > 0.75 + weather confirmed + no peer anomaly
-     ↓
-SOFT-HOLD (6h) → trust score 0.45–0.75 → system waits for additional signal resolution
-     ↓              worker gets: "your claim is being verified. payment by [time]."
-     ↓              if weather persists + no red flags → auto-approved after window
-MANUAL REVIEW  → trust score < 0.45 OR peer cluster anomaly detected
-     ↓              human reviewer + worker can submit a 15-sec voice note
-     ↓              most legit edge cases resolved here
-FLAGGED/DENIED → confirmed spoofing pattern. account suspended. reported.
+trust > 0.75 → AUTO-APPROVED (speed based on loyalty tier)
+trust 0.45–0.75 → SOFT-HOLD (6h window, auto-resolves if weather persists)
+trust < 0.45 → MANUAL REVIEW (15-sec voice note option for worker)
+confirmed fraud → FLAGGED + suspended
 ```
 
-> **the promise:** an honest worker in a genuine flood will never wait more than 6 hours. a fraudster running a spoofing app gets caught at the cluster-anomaly layer before payout happens.
+> honest workers in a real flood never wait more than 6 hours. fraudsters are caught at the cluster layer before a single payout fires.
 
 ---
 
-## tech stack 🛠️
+## weekly pricing
 
-```
-Backend      → Python + FastAPI
-Frontend     → HTML / CSS / JS (web-first for demo ease)
-ML Models    → Scikit-learn (Random Forest, Isolation Forest, Linear Regression)
-Database     → MongoDB (user data, claims) + PostgreSQL (financial records)
-Weather API  → OpenWeatherMap (free tier)
-Payments     → Razorpay Test Mode
-Deployment   → to be finalized in Phase 2
-```
+| Risk Level | Weekly Premium | Coverage |
+|------------|---------------|----------|
+| 🟢 Low | ₹20 | ₹500 |
+| 🟡 Medium | ₹40 | ₹1,000 |
+| 🔴 High | ₹70 | ₹1,500 |
 
-**why web over mobile?** faster to build, easier to demo to judges, accessible on any device a delivery partner carries. mobile-first UI design regardless.
+premiums recalculate weekly based on forecasted zone risk. loyalty discounts applied on top.
 
 ---
 
-## phase roadmap 🗺️
+## roadmap
 
-- [x] **Phase 1** — Ideation, architecture, workflow design, anti-spoofing strategy
-- [ ] **Phase 2** — Backend APIs, ML models, automated triggers, claims engine
-- [ ] **Phase 3** — Advanced fraud detection, payment simulation, dashboards, final pitch
-
----
-
-## the team
-
-> built with 0 sleep and very strong chai ☕  
-> *Guidewire DEVTrails 2026 — Unicorn Chase*
+- [x] **Phase 1** — architecture, workflow, anti-spoofing, income fingerprinting, liquidity model
+- [ ] **Phase 2** — backend APIs, ML training, triggers, claims engine, frontend
+- [ ] **Phase 3** — advanced fraud, payment simulation, dual dashboards, final pitch
 
 ---
 
@@ -232,8 +150,10 @@ Deployment   → to be finalized in Phase 2
 
 **gigshield. because the rain shouldn't cost them their rent.**
 
-<img src="https://img.shields.io/badge/Phase%201-Complete-22C55E?style=flat-square" />
-<img src="https://img.shields.io/badge/Anti--Spoofing-Implemented-FF6B35?style=flat-square" />
-<img src="https://img.shields.io/badge/Weekly%20Pricing-Active-0066CC?style=flat-square" />
+*Guidewire DEVTrails 2026 — built on 0 sleep and very strong chai ☕*
+
+<img src="https://img.shields.io/badge/Anti--Spoofing-6--Signal-FF6B35?style=flat-square" />
+<img src="https://img.shields.io/badge/Income%20Fingerprinting-Novel-8B5CF6?style=flat-square" />
+<img src="https://img.shields.io/badge/Pool%20Liquidity%20Guard-Active-0066CC?style=flat-square" />
 
 </div>
