@@ -1,0 +1,23 @@
+<svg width="680" height="220" xmlns="http://www.w3.org/2000/svg" font-family="monospace, sans-serif">
+  <rect width="680" height="220" rx="14" fill="#0d1117"/>
+  <text x="340" y="28" text-anchor="middle" fill="#FFD45A" font-size="13" font-weight="bold">loyalty trust tier → payout speed funnel</text>
+
+  <!-- Champion — widest -->
+  <polygon points="80,42 600,42 555,80 125,80" fill="#FFD45A"/>
+  <text x="340" y="66" text-anchor="middle" fill="#000000" font-size="11" font-weight="bold">🏆 Champion — INSTANT payout · 20% discount · 1yr clean record</text>
+
+  <!-- Trusted -->
+  <polygon points="125,84 555,84 515,118 165,118" fill="#FFA95A"/>
+  <text x="340" y="106" text-anchor="middle" fill="#000000" font-size="11" font-weight="bold">✅ Trusted — 45 min · 12% discount · 6 months + 0 flags</text>
+
+  <!-- Verified -->
+  <polygon points="165,122 515,122 478,156 202,156" fill="#FF8B5A"/>
+  <text x="340" y="144" text-anchor="middle" fill="#000000" font-size="11" font-weight="bold">🔵 Verified — 2 hours · 5% discount · 3 months</text>
+
+  <!-- New — narrowest -->
+  <polygon points="202,160 478,160 448,194 232,194" fill="#FF5A5A"/>
+  <text x="340" y="182" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="bold">🆕 New — 6h soft-hold · no discount</text>
+
+  <!-- side label -->
+  <text x="24" y="120" text-anchor="middle" fill="#8b949e" font-size="10" transform="rotate(-90,24,120)">faster payout ↑</text>
+</svg>

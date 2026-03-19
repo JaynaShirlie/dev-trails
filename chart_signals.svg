@@ -1,0 +1,50 @@
+<svg width="680" height="240" xmlns="http://www.w3.org/2000/svg" font-family="monospace, sans-serif">
+  <rect width="680" height="240" rx="14" fill="#0d1117"/>
+  <text x="340" y="28" text-anchor="middle" fill="#FFD45A" font-size="13" font-weight="bold">6-signal anti-spoofing — detection weight per signal</text>
+
+  <!-- axis -->
+  <line x1="230" y1="42" x2="230" y2="218" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="230" y1="218" x2="630" y2="218" stroke="#30363d" stroke-width="1"/>
+
+  <!-- gridlines at 25% 50% 75% 100% (400px = 100%) -->
+  <line x1="330" y1="42" x2="330" y2="218" stroke="#21262d" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="430" y1="42" x2="430" y2="218" stroke="#21262d" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="530" y1="42" x2="530" y2="218" stroke="#21262d" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="630" y1="42" x2="630" y2="218" stroke="#21262d" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- x-axis labels -->
+  <text x="230" y="228" text-anchor="middle" fill="#8b949e" font-size="9">0%</text>
+  <text x="330" y="228" text-anchor="middle" fill="#8b949e" font-size="9">25%</text>
+  <text x="430" y="228" text-anchor="middle" fill="#8b949e" font-size="9">50%</text>
+  <text x="530" y="228" text-anchor="middle" fill="#8b949e" font-size="9">75%</text>
+  <text x="630" y="228" text-anchor="middle" fill="#8b949e" font-size="9">100%</text>
+
+  <!-- bars: each row height 26px, gap 6px, start y=50 -->
+  <!-- 1. income fingerprint 28% → 0.28*400=112px -->
+  <text x="225" y="65" text-anchor="end" fill="#cccccc" font-size="10">income fingerprint</text>
+  <rect x="230" y="50" width="112" height="20" rx="4" fill="#FF5A5A"/>
+  <text x="347" y="64" fill="#FF5A5A" font-size="10" font-weight="bold"> 28%</text>
+
+  <!-- 2. GPS x cell tower 22% → 88px -->
+  <text x="225" y="97" text-anchor="end" fill="#cccccc" font-size="10">GPS x cell tower</text>
+  <rect x="230" y="82" width="88" height="20" rx="4" fill="#FF6B4A"/>
+  <text x="323" y="96" fill="#FF6B4A" font-size="10" font-weight="bold"> 22%</text>
+
+  <!-- 3. peer cluster anomaly 20% → 80px -->
+  <text x="225" y="129" text-anchor="end" fill="#cccccc" font-size="10">peer cluster anomaly</text>
+  <rect x="230" y="114" width="80" height="20" rx="4" fill="#FF8B5A"/>
+  <text x="315" y="128" fill="#FF8B5A" font-size="10" font-weight="bold"> 20%</text>
+
+  <!-- 4. accelerometer 15% → 60px -->
+  <text x="225" y="161" text-anchor="end" fill="#cccccc" font-size="10">accelerometer pattern</text>
+  <rect x="230" y="146" width="60" height="20" rx="4" fill="#FFA95A"/>
+  <text x="295" y="160" fill="#FFA95A" font-size="10" font-weight="bold"> 15%</text>
+
+  <!-- 5. historical velocity 10% → 40px -->
+  <text x="225" y="193" text-anchor="end" fill="#cccccc" font-size="10">historical claim velocity</text>
+  <rect x="230" y="178" width="40" height="20" rx="4" fill="#FFD45A"/>
+  <text x="275" y="192" fill="#FFD45A" font-size="10" font-weight="bold"> 10%</text>
+
+  <!-- note: 5% weather check omitted for cleanliness, total shown = 95% -->
+  <text x="340" y="214" text-anchor="middle" fill="#444" font-size="9">+ weather source cross-validation (5%) not shown</text>
+</svg>

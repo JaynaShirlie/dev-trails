@@ -1,0 +1,59 @@
+<svg width="680" height="220" xmlns="http://www.w3.org/2000/svg" font-family="monospace, sans-serif">
+  <!-- background -->
+  <rect width="680" height="220" rx="14" fill="#0d1117"/>
+
+  <!-- title -->
+  <text x="340" y="30" text-anchor="middle" fill="#FFD45A" font-size="13" font-weight="bold">weekly premium vs max coverage — by risk tier</text>
+
+  <!-- axis -->
+  <line x1="80" y1="165" x2="630" y2="165" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="80" y1="50"  x2="80"  y2="165" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- gridlines -->
+  <line x1="80" y1="127" x2="630" y2="127" stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="80" y1="89"  x2="630" y2="89"  stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="80" y1="50"  x2="630" y2="50"  stroke="#21262d" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- y labels -->
+  <text x="72" y="169" text-anchor="end" fill="#8b949e" font-size="10">0</text>
+  <text x="72" y="131" text-anchor="end" fill="#8b949e" font-size="10">500</text>
+  <text x="72" y="93"  text-anchor="end" fill="#8b949e" font-size="10">1000</text>
+  <text x="72" y="54"  text-anchor="end" fill="#8b949e" font-size="10">1500</text>
+
+  <!-- LOW RISK group (x~150) -->
+  <!-- premium ₹20 → 20/1500*115 = 1.5px too small, use /10 scale for premium: 20/10=2px still tiny -->
+  <!-- let's just scale both to /1500*115 for coverage, premium separately *4 for visibility -->
+  <!-- premium bar: ₹20 * 4 = 8px tall -->
+  <rect x="130" y="157" width="36" height="8"   rx="3" fill="#FFD45A"/>
+  <!-- coverage bar: ₹500/1500*115 = 38px -->
+  <rect x="172" y="127" width="36" height="38"  rx="3" fill="#FFD45A" opacity="0.4"/>
+  <!-- labels -->
+  <text x="148" y="153" text-anchor="middle" fill="#FFD45A" font-size="10" font-weight="bold">₹20</text>
+  <text x="190" y="123" text-anchor="middle" fill="#FFD45A" font-size="10" font-weight="bold">₹500</text>
+  <!-- x label -->
+  <text x="168" y="183" text-anchor="middle" fill="#FFD45A" font-size="11" font-weight="bold">Low</text>
+
+  <!-- MEDIUM RISK group (x~320) -->
+  <!-- premium ₹40 * 4 = 16px -->
+  <rect x="300" y="149" width="36" height="16"  rx="3" fill="#FF8B5A"/>
+  <!-- coverage ₹1000/1500*115 = 77px -->
+  <rect x="342" y="88"  width="36" height="77"  rx="3" fill="#FF8B5A" opacity="0.4"/>
+  <text x="318" y="145" text-anchor="middle" fill="#FF8B5A" font-size="10" font-weight="bold">₹40</text>
+  <text x="360" y="84"  text-anchor="middle" fill="#FF8B5A" font-size="10" font-weight="bold">₹1,000</text>
+  <text x="338" y="183" text-anchor="middle" fill="#FF8B5A" font-size="11" font-weight="bold">Medium</text>
+
+  <!-- HIGH RISK group (x~490) -->
+  <!-- premium ₹70 * 4 = 28px -->
+  <rect x="470" y="137" width="36" height="28"  rx="3" fill="#FF5A5A"/>
+  <!-- coverage ₹1500/1500*115 = 115px -->
+  <rect x="512" y="50"  width="36" height="115" rx="3" fill="#FF5A5A" opacity="0.4"/>
+  <text x="488" y="133" text-anchor="middle" fill="#FF5A5A" font-size="10" font-weight="bold">₹70</text>
+  <text x="530" y="46"  text-anchor="middle" fill="#FF5A5A" font-size="10" font-weight="bold">₹1,500</text>
+  <text x="508" y="183" text-anchor="middle" fill="#FF5A5A" font-size="11" font-weight="bold">High</text>
+
+  <!-- legend -->
+  <rect x="220" y="200" width="12" height="10" rx="2" fill="#FFA95A"/>
+  <text x="236" y="209" fill="#8b949e" font-size="10">premium (solid)</text>
+  <rect x="360" y="200" width="12" height="10" rx="2" fill="#FFA95A" opacity="0.4"/>
+  <text x="376" y="209" fill="#8b949e" font-size="10">max coverage (faded)</text>
+</svg>
